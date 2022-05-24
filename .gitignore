@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# output from webpack
+dist/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# zip file for initial aws deployment
+*.zip
