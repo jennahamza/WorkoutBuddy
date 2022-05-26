@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../client/style.css">
     <title>Workout Buddy</title>
   </head>
   <body>
@@ -10,6 +11,50 @@
       <h1>Welcome to Workout Buddy</h1>
       <h3>Your hub for fitness accountability</h3>
     </header>
-    <div id="app"></div>
+    <div id="input-data">
+      <!-- <a href='./signup'>Sign up</a>
+      <a href='./login'>Login</a> -->
+
+      <!-- name -->
+      <!-- <form method="POST" action="/">
+        <input id="name" type="login" placeholder="Name"></input>
+        <input id="submit-name" type="submit"></input>
+      </form> -->
+        <!-- name2 -->
+        <input id="name" type="text" placeholder="Name"></input>
+        <!-- date -->
+        <input id="date" type="text" placeholder="Date"></input>
+        <!-- activity -->
+        <div class="dropdown">
+          <!-- <label for="activity">Activity Type:</label> -->
+          <select name="activity" id="activity">
+            <option class="label" value="undefined">Activity Type</option>
+            <option class="label" value="undefined"></option>
+            <option value="walk">Walk</option>
+            <option value="run">Run</option>
+            <option value="bike">Bike</option>
+            <option value="hike">Hike</option>
+            <option value="swim">Swim</option>
+            <option value="yoga">Yoga</option>
+            <option value="gym">Gym</option>
+          </select>
+        </div>
+        <!-- duration -->
+        <input id="duration" type="text" placeholder="Workout Duration (minutes)"></input>
+        <!-- effort  -->
+        <div class="dropdown">
+          <!-- <label for="effort">Effort Level:</label> -->
+          <select name="effort" id="effort">
+            <option class="label" value="undefined">Effort Level</option>
+            <option class="label" value="undefined"></option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <button id="submitdata">Submit</button>
+        <button id="view-log">View Activity Log</button>
+    </div>
+    <script src="../client/index.js"></script>
   </body>
   </html>

@@ -4,11 +4,18 @@ const app = express();
 const apiRouter = require('./api');
 const PORT = 3000;
 
+const mongoose = require('mongoose');
+const MONGO_URI = 'mongodb+srv://jhamza:1091Jshh@cluster0.h6dwc.mongodb.net/?retryWrites=true&w=majority';
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, dbName: 'solo'});
+mongoose.connection.once('open', () => {
+  console.log('Connected to Database');
+});
+
 // parse request body
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 // serve static files
-app.use(express.static(path.resolve(__dirname, '../client')));
+app.use('/client', express.static(path.resolve(__dirname, '../client')));
 // define route handlers
 app.use('/api', apiRouter);
   // catch-all route handler
