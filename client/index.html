@@ -8,9 +8,9 @@
   </head>
   <body>
     <header>
-      <h1>Welcome to Workout Buddy</h1>
-      <h3>Your hub for fitness accountability</h3>
+      <h1>@WorkoutBuddy</h1>
     </header>
+    <h3>Your hub for fitness accountability</h3>
     <div id="input-data">
       <!-- <a href='./signup'>Sign up</a>
       <a href='./login'>Login</a> -->
@@ -20,15 +20,20 @@
         <input id="name" type="login" placeholder="Name"></input>
         <input id="submit-name" type="submit"></input>
       </form> -->
-        <!-- name2 -->
-        <input id="name" type="text" placeholder="Name"></input>
+      <!-- name2 -->
+      <input id="name" type="text" placeholder="Name"></input>
+      <span id="userbuttons">
+        <button id="submitname">Enter</button>
+        <button id="resetuser">Reset User</button>
+      </span>
+      <span id="current-user"></span>
         <!-- date -->
         <input id="date" type="text" placeholder="Date"></input>
         <!-- activity -->
         <div class="dropdown">
           <!-- <label for="activity">Activity Type:</label> -->
           <select name="activity" id="activity">
-            <option class="label" value="undefined">Activity Type</option>
+            <option class="label" value="0">Activity Type</option>
             <option class="label" value="undefined"></option>
             <option value="walk">Walk</option>
             <option value="run">Run</option>
@@ -45,16 +50,17 @@
         <div class="dropdown">
           <!-- <label for="effort">Effort Level:</label> -->
           <select name="effort" id="effort">
-            <option class="label" value="undefined">Effort Level</option>
+            <option class="label" value="0">Intensity</option>
             <option class="label" value="undefined"></option>
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
           </select>
         </div>
-        <button id="submitdata">Submit</button>
+        <button id="submitdata">Submit Activity</button>
+        <span id = "activity-submitted"></span>
         <button id="view-log">View Activity Log</button>
-    </div>
-    <script src="../client/index.js"></script>
-  </body>
-  </html>
+      </div>
+      <script src="../client/index.js"></script>
+    </body>
+    </html>

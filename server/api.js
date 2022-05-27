@@ -12,16 +12,25 @@ router.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/index.html'));
 })
 
-router.post('/', activityController.logActivity, (req, res) => {
+router.post('/', activityController.getUserID, activityController.logActivity, (req, res) => {
     res.status(200).send('added activity');
 });
 
-router.get('/log', activityController.getActivityLog, (req, res) => {
+// router.post('/log', activityController.getActivityLog, (req, res) => {
+//   res.status(200).json(res.locals.activities);
+// });
+
+router.get('/log', activityController.getUserID, activityController.getActivityLog, (req, res) => {
+  console.log('res.locals.activities: ', res.locals.activities);
   res.status(200).json(res.locals.activities);
 });
 
 router.get('/activitylog', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/log.html'));
-})
+});
+
+router.get('/setuser', userController.verifyUser, userController.createUser, (req, res) => {
+  res.status(200).send('set user');
+});
 
 module.exports = router;

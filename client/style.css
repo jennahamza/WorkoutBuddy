@@ -1,15 +1,44 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url('https://www.publicdomainpictures.net/pictures/380000/velka/outdoor-yoga.jpg');
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background-position: center;
+  margin: 0;
 }
 
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  color: darkslategray;
+  background: rgba(44, 36, 49, 0.775);
+  margin-top: 0;
+  width: 100%;
+}
+
+h1 {
+  margin: 15px;
+  color: rgb(234, 230, 230);
+}
+
+h3 {
+  margin: 15px;
+  color: rgb(255, 248, 248);
+}
+
+button {
+  border: gray;
+  border-radius: 5px;
+  border: 1px;
+  box-shadow: 2px 1px 8px 2px rgba(85, 84, 84, 0.3);
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 /* STYLING FOR INDEX.HTML */
@@ -22,11 +51,47 @@ header {
   padding: 20px;
 }
 
+#submitname {
+  margin: 5px;
+  height: 30px;
+  width: 100px;
+  background-color: darkslategray;
+  color: lightblue;
+}
+
+#resetuser {
+  margin: 5px;
+  height: 30px;
+  width: 100px;
+  background-color: white;
+  color: cornflowerblue;
+}
+
+#current-user {
+  font-size: 16px;
+  margin: 15px 0px 0px;
+  color: rgb(234, 230, 230);
+}
+
 input {
-  margin: 20px;
-  height: 25px;
+  margin: 15px;
+  padding: 7px;
+  height: 27px;
   width: 200px;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 1px;
+  border-color: gray;
+  background-color:rgb(234, 230, 230);
+  font-size: 15px;
+  box-shadow: 2px 1px 10px 2px rgba(85, 84, 84, 0.4);
+}
+
+#name {
+  background-color: white;
+}
+
+#activity-submitted {
+  color: white;
 }
 
 .dropdown {
@@ -38,11 +103,16 @@ input {
 }
 
 select {
-  margin: 10px;
-  height: 30px;
+  margin: 15px;
+  height: 40px;
   width: 210px;
-  border-radius: 5px;
-  font-style: italic;
+  border-radius: 10px;
+  border: 1px;
+  border-color: gray;
+  background-color: rgb(234, 230, 230);
+  font-size: 15px;
+  box-shadow: 2px 1px 10px 2px rgba(85, 84, 84, 0.4);
+  color: gray;
 }
 
 /* label {
@@ -54,13 +124,13 @@ select {
 #submitdata {
   margin: 5px;
   height: 30px;
-  width: 75px;
+  width: 110px;
   background-color: white;
   color: cornflowerblue;
 }
 
 #view-log {
-  margin: 50px;
+  margin: 40px;
   height: 50px;
   width: 250px;
   background-color: darkslategray;
@@ -72,12 +142,17 @@ select {
 
 #display {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center
 }
 
 table {
   text-align: center;
+  background-color: rgb(234, 230, 230, 0.6);
+  border-radius: 10px;
+  overflow-y: scroll;
+  height: 350px;
 }
 
 tr {
@@ -86,4 +161,12 @@ tr {
 
 th {
   padding: 30px;
+}
+
+#back {
+  margin: 50px;
+  height: 40px;
+  width: 100px;
+  background-color: darkslategray;
+  color: lightblue;
 }
